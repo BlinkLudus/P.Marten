@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Conor/SampleScene_CSheppard.unity
     guid: 2afa2dcd26b230045a1590442a14d108
+  - enabled: 1
+    path: Assets/Scenes/Conor/OptionsMenu.unity
+    guid: ef35c4a6a57e88b4e9a92f21a7f49b79
   m_configObjects: {}
