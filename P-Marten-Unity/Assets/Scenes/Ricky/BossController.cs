@@ -9,7 +9,7 @@ public class BossController : MonoBehaviour
  //Declaring Variables 
  public Animator bossAnimator;
  public Transform playerTransform;
- public float attackDistance = 1.5f;
+ public float attackDistance = 1f;
  public string attackTrigger = "Attack";
 
 private void Update()

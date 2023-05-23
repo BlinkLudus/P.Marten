@@ -170,7 +170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bossAnimator: {fileID: 1326853664}
   playerTransform: {fileID: 1227678350}
-  attackDistance: 1.5
+  attackDistance: 1
   attackTrigger: Attack
 --- !u!61 &123063376
 BoxCollider2D:
