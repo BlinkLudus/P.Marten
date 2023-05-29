@@ -6,61 +6,61 @@ using UnityEngine;
 
 public class FallingAttack : MonoBehaviour
 {
-    public GameObject spritePrefab;
-    public int numAttacks = 10;
-    public float spawnDelay = 2f;
-    public float spawnHeight = 10f;
-    public float bossHealthThreshold = 0.7f;
+    public GameObject spritePrefab; // Reference to the sprite prefab object
+    public int numAttacks = 10; // Number of attacks the boss can perform
+    public float spawnDelay = 2f; // Delay between each sprite spawn
+    public float spawnHeight = 10f; // Height at which sprites are spawned
+    public float bossHealthThreshold = 0.7f; // Health threshold below which the boss will start attacking
 
-    private int attacksRemaining;
-    private bool isAttacking;
+    private int attacksRemaining; // Number of remaining attacks
+    private bool isAttacking; // Flag indicating if the boss is currently attacking
 
     private void Update()
     {
         if (!isAttacking && IsBossHealthBelowThreshold())
         {
-            StartAttack();
+            StartAttack(); // Start the attack if the boss health is below the threshold
         }
     }
 
     private bool IsBossHealthBelowThreshold()
     {
-        return GetBossHealth() < bossHealthThreshold;
+        return GetBossHealth() < bossHealthThreshold; // Check if the boss health is below the threshold
     }
 
     private float GetBossHealth()
     {
-        // Replace with your own boss health retrieval logic
-        return 1f;
+        return 1f; // Placeholder to retrieve the boss's health
     }
 
     private void StartAttack()
     {
-        isAttacking = true;
-        attacksRemaining = numAttacks;
-        InvokeRepeating("SpawnSprite", 0f, spawnDelay);
+        isAttacking = true; // Set the attacking flag to true
+        attacksRemaining = numAttacks; // Initialize the number of remaining attacks
+        InvokeRepeating("SpawnSprite", 0f, spawnDelay); // Start spawning sprites with the specified delay
     }
 
     private void SpawnSprite()
     {
         if (attacksRemaining <= 0)
         {
-            StopAttack();
+            StopAttack(); // If there are no remaining attacks, stop the attack
             return;
         }
 
-        attacksRemaining--;
+        attacksRemaining--; // reduce the number of remaining attacks
 
+        // Generate a random X position within the screen bounds
         float randomX = Random.Range(-Camera.main.orthographicSize * Camera.main.aspect,
                                       Camera.main.orthographicSize * Camera.main.aspect);
 
-        Vector3 spawnPosition = new Vector3(randomX, spawnHeight, 0f);
-        Instantiate(spritePrefab, spawnPosition, Quaternion.identity);
+        Vector3 spawnPosition = new Vector3(randomX, spawnHeight, 0f); // Calculate the spawn position
+        Instantiate(spritePrefab, spawnPosition, Quaternion.identity); // Create a new sprite at the spawn position
     }
 
     private void StopAttack()
     {
-        isAttacking = false;
-        CancelInvoke("SpawnSprite");
+        isAttacking = false; // Set the attacking flag to false
+        CancelInvoke("SpawnSprite"); // Stop spawning sprites
     }
 }
