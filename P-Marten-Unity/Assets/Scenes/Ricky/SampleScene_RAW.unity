@@ -149,7 +149,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 123063373}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.8085423, y: -1.7129142, z: 0.07793199}
+  m_LocalPosition: {x: -1.8085423, y: -2.07, z: 0.07793199}
   m_LocalScale: {x: 0.63015413, y: 0.58661443, z: 0.58661443}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -170,7 +170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bossAnimator: {fileID: 1326853664}
   playerTransform: {fileID: 1227678350}
-  attackDistance: 1
+  attackDistance: 2
   attackTrigger: Attack
 --- !u!61 &123063376
 BoxCollider2D:
@@ -659,7 +659,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1227678346}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.1, y: -2.73, z: 0.03542715}
+  m_LocalPosition: {x: -7.17, y: -2.73, z: 0.03542715}
   m_LocalScale: {x: 0.7708597, y: 0.7708597, z: 0.7708597}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -679,6 +679,7 @@ GameObject:
   - component: {fileID: 1326853662}
   - component: {fileID: 1326853665}
   - component: {fileID: 1326853664}
+  - component: {fileID: 1326853666}
   m_Layer: 6
   m_Name: Boss
   m_TagString: Untagged
@@ -791,6 +792,22 @@ CapsuleCollider2D:
   m_Offset: {x: -0.34041512, y: -0.038410533}
   m_Size: {x: 3.2740226, y: 5.0465407}
   m_Direction: 0
+--- !u!114 &1326853666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326853661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88e898a53fd1ca24ab78fb181e59d57a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bossAnimator: {fileID: 1326853664}
+  playerTransform: {fileID: 1227678350}
+  attackDistance: 2
+  attackTrigger: Attack
 --- !u!1 &1450826618
 GameObject:
   m_ObjectHideFlags: 0
