@@ -35,7 +35,20 @@ public class HealthDisplay : MonoBehaviour
             //So we get the current health and add one to it and store the result back into the iconHealth variable
             iconHealth = iconHealth + 1;
 
-            if(player.currentHealth >= iconHealth)
+            //if the player current health is equal or greater
+            //than the health value for this icon...
+            if(player.GetHealth() >= iconHealth)
+            {
+                //Then turn the icon ON
+                icon.SetActive(true);
+            }
+            //otherwise
+            //(the player's health is LESS than this icon's value)
+            else
+            {
+                //... turn the icon OFF
+                icon.SetActive(false);
+            }
         }
     }
 }
