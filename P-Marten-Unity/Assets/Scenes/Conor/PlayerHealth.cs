@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     public int startingHealth = 3;
-    public int currentHealth;
+    private int currentHealth;
 
     private void Awake()
     {
@@ -30,5 +30,8 @@ public class PlayerHealth : MonoBehaviour
         Destroy(gameObject);
     }
 
-   
+   public int GetHealth()
+    {
+        return currentHealth;
+    }
 }
