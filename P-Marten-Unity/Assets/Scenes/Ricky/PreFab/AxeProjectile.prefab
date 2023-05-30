@@ -13,10 +13,13 @@ GameObject:
   - component: {fileID: 6651072012801115412}
   - component: {fileID: 5562594155340163246}
 <<<<<<< HEAD
+<<<<<<< HEAD
   - component: {fileID: 9050439452612198345}
 =======
   - component: {fileID: 2004159140991291657}
 >>>>>>> 9e115d114c1bf3baee49882c840e8b08d0575627
+=======
+>>>>>>> parent of f4aa1b0 (Added Ricky's script to my scene to test)
   m_Layer: 0
   m_Name: AxeProjectile
   m_TagString: Untagged
@@ -139,6 +142,7 @@ SpriteRenderer:
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &9050439452612198345
 =======
 --- !u!114 &2004159140991291657
@@ -155,3 +159,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hazardDamage: 1
+=======
+>>>>>>> parent of f4aa1b0 (Added Ricky's script to my scene to test)
