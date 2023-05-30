@@ -1176,7 +1176,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1227678346}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.29, y: -2.73, z: 0.03542715}
+  m_LocalPosition: {x: 0.74, y: -2.73, z: 0.03542715}
   m_LocalScale: {x: 0.7708597, y: 0.7708597, z: 0.7708597}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2249,6 +2249,7 @@ GameObject:
   - component: {fileID: 1949617372}
   - component: {fileID: 1949617371}
   - component: {fileID: 1949617370}
+  - component: {fileID: 1949617377}
   - component: {fileID: 1949617376}
   m_Layer: 6
   m_Name: Boss
@@ -2270,8 +2271,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 6534916999434334229, guid: a1ac4d17d6d243647bacd99247dacdaf, type: 3}
-  projectileVelocity: {x: -10, y: 0}
-  offset: {x: 0, y: 0, z: 0}
+  projectileVelocity: {x: -20, y: 0}
+  offset: {x: 0, y: -3, z: 0}
 --- !u!114 &1949617371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2286,7 +2287,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bossAnimator: {fileID: 1949617372}
   playerTransform: {fileID: 1227678350}
-  attackDistance: 2
+  attackDistance: 10
   attackTrigger: Attack
 --- !u!95 &1949617372
 Animator:
@@ -2406,3 +2407,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bStartingHealth: 3
+--- !u!114 &1949617377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949617369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88e898a53fd1ca24ab78fb181e59d57a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bossAnimator: {fileID: 1949617372}
+  playerTransform: {fileID: 1227678350}
+  attackDistance: 2
+  attackTrigger: Attack

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2692895444347009989}
   - component: {fileID: 6651072012801115412}
   - component: {fileID: 5562594155340163246}
+  - component: {fileID: 9050439452612198345}
   m_Layer: 0
   m_Name: AxeProjectile
   m_TagString: Untagged
@@ -44,7 +45,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -133,3 +134,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &9050439452612198345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6534916999434334229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73233aecb924dea4397dcb00963f8ad1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hazardDamage: 1
