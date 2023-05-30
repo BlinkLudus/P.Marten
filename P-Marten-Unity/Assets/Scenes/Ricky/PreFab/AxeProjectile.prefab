@@ -12,7 +12,11 @@ GameObject:
   - component: {fileID: 2692895444347009989}
   - component: {fileID: 6651072012801115412}
   - component: {fileID: 5562594155340163246}
+<<<<<<< HEAD
   - component: {fileID: 9050439452612198345}
+=======
+  - component: {fileID: 2004159140991291657}
+>>>>>>> 9e115d114c1bf3baee49882c840e8b08d0575627
   m_Layer: 0
   m_Name: AxeProjectile
   m_TagString: Untagged
@@ -81,7 +85,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!212 &5562594155340163246
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -134,7 +138,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+<<<<<<< HEAD
 --- !u!114 &9050439452612198345
+=======
+--- !u!114 &2004159140991291657
+>>>>>>> 9e115d114c1bf3baee49882c840e8b08d0575627
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
