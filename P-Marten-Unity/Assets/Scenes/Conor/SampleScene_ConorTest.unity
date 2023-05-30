@@ -2249,8 +2249,11 @@ GameObject:
   - component: {fileID: 1949617372}
   - component: {fileID: 1949617371}
   - component: {fileID: 1949617370}
+<<<<<<< HEAD
   - component: {fileID: 1949617377}
   - component: {fileID: 1949617376}
+=======
+>>>>>>> parent of 448c7aa (Created boss health script and bullet damage, the boss now has health)
   m_Layer: 6
   m_Name: Boss
   m_TagString: Untagged
@@ -2394,6 +2397,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!114 &1949617376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2423,3 +2427,5 @@ MonoBehaviour:
   playerTransform: {fileID: 1227678350}
   attackDistance: 2
   attackTrigger: Attack
+=======
+>>>>>>> parent of 448c7aa (Created boss health script and bullet damage, the boss now has health)
