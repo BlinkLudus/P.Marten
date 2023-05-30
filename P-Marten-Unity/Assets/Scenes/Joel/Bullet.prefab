@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3978676725339153349}
   - component: {fileID: 3978676725339153348}
   - component: {fileID: -8458172895635878479}
+  - component: {fileID: -5102112016277515675}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -139,3 +140,16 @@ MonoBehaviour:
   life: 3
   impactEffect: {fileID: 706890259246949436, guid: 73d6df6b7de67c64ca6173f05d80eaae, type: 3}
   gravityScale: 0.04
+--- !u!114 &-5102112016277515675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3978676725339153351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a88856c27410fd14bb3b21d95965b5d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletDamage: 1
