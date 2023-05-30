@@ -10,7 +10,7 @@ public class FallingAttack : MonoBehaviour
     public int numAttacks = 10; // Number of attacks the boss can perform
     public float spawnDelay = 2f; // Delay between each sprite spawn
     public float spawnHeight = 10f; // Height at which sprites are spawned
-    public float bossHealthThreshold = 0.7f; // Health threshold below which the boss will start attacking
+    public float BossHealth = 7f; // Health threshold below which the boss will start attacking
 
     private int attacksRemaining; // Number of remaining attacks
     private bool isAttacking; // Flag indicating if the boss is currently attacking
@@ -25,7 +25,7 @@ public class FallingAttack : MonoBehaviour
 
     private bool IsBossHealthBelowThreshold()
     {
-        return GetBossHealth() < bossHealthThreshold; // Check if the boss health is below the threshold
+        return GetBossHealth() < BossHealth; // Check if the boss health is below the threshold
     }
 
     private float GetBossHealth()
