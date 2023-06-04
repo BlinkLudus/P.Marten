@@ -30,8 +30,11 @@ public class BossHealth : MonoBehaviour
         Destroy(gameObject);
     }
 
+    // This is a custom getter function which gives info to the calling node
+    // the int is type of info that will be given
     public int GetHealth()
     {
+        // return will give the following info back to the player
         return bCurrentHealth;
     }
 }
