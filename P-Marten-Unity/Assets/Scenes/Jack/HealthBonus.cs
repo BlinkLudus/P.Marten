@@ -15,11 +15,15 @@ public class HealthBonus : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (playerHealth.GetHealth() < playerHealth.startingHealth)
+        if (col.CompareTag("Player"))
         {
-            Destroy(gameObject);
-            playerHealth.currentHealth = (int)(playerHealth.GetHealth() + healthBonus);
+            if (playerHealth.GetHealth() < playerHealth.startingHealth)
+            {
+                Destroy(gameObject);
+                playerHealth.currentHealth = (int)(playerHealth.GetHealth() + healthBonus);
+            }
         }
+       
         
     }
 }
