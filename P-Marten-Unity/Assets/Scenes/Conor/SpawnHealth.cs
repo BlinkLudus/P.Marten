@@ -13,6 +13,7 @@ public class SpawnHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // When timer exceeds spawn interval SpawnObject method is called
         spawnTimer += Time.deltaTime;
         if (spawnTimer >= spawnInterval)
         {
