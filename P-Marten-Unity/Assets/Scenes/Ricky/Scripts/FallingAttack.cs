@@ -7,8 +7,8 @@ using UnityEngine;
 public class FallingAttack : MonoBehaviour
 {
     public GameObject spritePrefab; // Reference to the sprite prefab object
-    public int numAttacks = 10; // Number of attacks the boss can perform
-    public float spawnDelay = 2f; // Delay between each sprite spawn
+    public int numAttacks = 1; // Number of attacks the boss can perform
+    public float spawnDelay = 60f; // Delay between each sprite spawn
     public float spawnHeight = 10f; // Height at which sprites are spawned
     public float BossHealth = 7f; // Health threshold below which the boss will start attacking
 
