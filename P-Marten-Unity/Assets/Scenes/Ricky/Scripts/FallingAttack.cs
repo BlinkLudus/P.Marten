@@ -11,7 +11,7 @@ public class FallingAttack : MonoBehaviour
     public float spawnDelay = 2f; // Delay between each sprite spawn
     public float spawnHeight = 10f; // Height at which sprites are spawned
     public float BossHealth = 7f; // Health threshold below which the boss will start attacking
-
+    
     private int attacksRemaining; // Number of remaining attacks
     private bool isAttacking; // Flag indicating if the boss is currently attacking
 
@@ -63,4 +63,6 @@ public class FallingAttack : MonoBehaviour
         isAttacking = false; // Set the attacking flag to false
         CancelInvoke("SpawnSprite"); // Stop spawning sprites
     }
+
+   
 }
