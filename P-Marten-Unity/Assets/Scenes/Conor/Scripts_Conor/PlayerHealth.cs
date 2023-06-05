@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
     public int startingHealth = 3;
     public int currentHealth;
+    public string targetScene = "";
 
     private void Awake()
     {
@@ -21,7 +23,9 @@ public class PlayerHealth : MonoBehaviour
         if (currentHealth == 0)
         {
             // Call kill function to kill player
-            Kill();
+            //Kill();
+            ChangeScene();
+            
         }
     }
 
@@ -33,5 +37,10 @@ public class PlayerHealth : MonoBehaviour
    public int GetHealth()
     {
         return currentHealth;
+    }
+
+    public void ChangeScene()
+    {
+        SceneManager.LoadScene(targetScene);
     }
 }

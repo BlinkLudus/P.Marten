@@ -268,7 +268,7 @@ GameObject:
   - component: {fileID: 375629641}
   - component: {fileID: 375629643}
   - component: {fileID: 375629642}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: ProximityArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -914,7 +914,7 @@ GameObject:
   - component: {fileID: 921603305}
   - component: {fileID: 921603307}
   - component: {fileID: 921603306}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AngryHaggis0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -943,16 +943,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 921603304}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 84f69baec933da94b8f16ee2e8c726a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spritePrefab: {fileID: 921603304}
+  spritePrefab: {fileID: 2974824571817675710, guid: e9e4ecf8a4bcdc245a25ff9052672e53, type: 3}
   numAttacks: 10
-  spawnDelay: 3
+  spawnDelay: 4
   spawnHeight: 10
-  BossHealth: 7
+  BossHealth: 2
 --- !u!212 &921603307
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1538,7 +1538,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1227678346}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.25, y: -2.59, z: 0.03542715}
+  m_LocalPosition: {x: -6.7, y: -2.59, z: 0.03542715}
   m_LocalScale: {x: 0.7708597, y: 0.7708597, z: 0.7708597}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1669,7 +1669,7 @@ GameObject:
   - component: {fileID: 1417433921}
   - component: {fileID: 1417433920}
   - component: {fileID: 1417433919}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Boss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1688,7 +1688,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d296c29141bf454cacfdd0b326ccebf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 6534916999434334229, guid: a1ac4d17d6d243647bacd99247dacdaf, type: 3}
+  projectilePrefab: {fileID: 2974824571817675710, guid: e9e4ecf8a4bcdc245a25ff9052672e53, type: 3}
   projectileVelocity: {x: -10, y: 0}
   offset: {x: 0, y: -3, z: 0}
 --- !u!114 &1417433920
@@ -1718,7 +1718,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bossAnimator: {fileID: 1417433922}
   playerTransform: {fileID: 1227678350}
-  attackDistance: 2
+  attackDistance: 40
   attackTrigger: Attack
 --- !u!95 &1417433922
 Animator:
@@ -2868,9 +2868,9 @@ RectTransform:
   m_Father: {fileID: 1780376498}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -566, y: 238}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 40, y: -49}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2113903177
