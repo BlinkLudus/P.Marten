@@ -1607,7 +1607,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fe6beeffadc42e489d3832013cf5702, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 10
   jumpSpeed: 10
   jumpDeadZone: 0.5
   groundSensor: {fileID: 188791193}
