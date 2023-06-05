@@ -5,14 +5,33 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerMovement : MonoBehaviour
 {
+    [System.Serializable]
+    public class MovementSettings
+    {
+        public float speed = 1f;
+        public float jumpSpeed = 10f;
+        public float jumpDeadZone = 0.5f;
+        public float jumpCooldown = 1f; // Cooldown time between jumps
+    }
+
+    [System.Serializable]
+    public class Colliders
+    {
+        public Collider2D groundSensor;
+        public LayerMask groundLayer;
+    }
+
+    [System.Serializable]
+    public class InputSettings
+    {
+        public FixedJoystick joystick;
+    }
+
+    [SerializeField] private MovementSettings movementSettings;
+    [SerializeField] private Colliders colliders;
+    [SerializeField] private InputSettings inputSettings;
+
     private Rigidbody2D physicsBody;
-    public float speed = 1f;
-    public float jumpSpeed = 10f;
-    public float jumpDeadZone = 0.5f;
-    public Collider2D groundSensor;
-    public LayerMask groundLayer;
-    public FixedJoystick joystick;
-    public float jumpCooldown = 1f; // Cooldown time between jumps
     private float jumpTimer = 0f; // Timer to track jump cooldown
 
     private void Awake()
@@ -22,8 +41,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        float horizontalInput = joystick.Horizontal;
-        float verticalInput = joystick.Vertical;
+        float horizontalInput = inputSettings.joystick.Horizontal;
+        float verticalInput = inputSettings.joystick.Vertical;
 
         HandleMovement(horizontalInput);
         HandleJump(verticalInput);
@@ -39,10 +58,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void HandleJump(float verticalInput)
     {
-        if (verticalInput > jumpDeadZone && groundSensor.IsTouchingLayers(groundLayer) && jumpTimer <= 0f)
+        if (verticalInput > movementSettings.jumpDeadZone && colliders.groundSensor.IsTouchingLayers(colliders.groundLayer) && jumpTimer <= 0f)
         {
             Jump();
-            jumpTimer = jumpCooldown;
+            jumpTimer = movementSettings.jumpCooldown;
         }
 
         // Update the jump timer
@@ -55,17 +74,18 @@ public class PlayerMovement : MonoBehaviour
     private void Move(float horizontalInput)
     {
         Vector2 newVelocity = physicsBody.velocity;
-        newVelocity.x = horizontalInput * speed;
+        newVelocity.x = horizontalInput * movementSettings.speed;
         physicsBody.velocity = newVelocity;
     }
 
     private void Jump()
     {
         Vector2 newVelocity = physicsBody.velocity;
-        newVelocity.y = jumpSpeed;
+        newVelocity.y = movementSettings.jumpSpeed;
         physicsBody.velocity = newVelocity;
     }
 }
+
 
 
 
