@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BossHealth : MonoBehaviour
 {
     public int bStartingHealth = 3;
     private int bCurrentHealth;
+    public string targetScene = "";
 
     private void Awake()
     {
@@ -36,5 +38,10 @@ public class BossHealth : MonoBehaviour
     {
         // return will give the following info back to the player
         return bCurrentHealth;
+    }
+
+    public void ChangeScene()
+    {
+        SceneManager.LoadScene(targetScene);
     }
 }
