@@ -24,6 +24,7 @@ public class BossHealth : MonoBehaviour
         {
             // Call kill function to kill player
             Kill();
+            ChangeScene();
         }
     }
 
