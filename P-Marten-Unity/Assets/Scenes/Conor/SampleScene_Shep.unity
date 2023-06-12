@@ -1919,8 +1919,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootingSettings:
     bulletSpeed: 15
-    shootDelay: 0.3
-    clipSize: 12
+    shootDelay: 0.01
+    clipSize: 50
     reloadTimer: 2
   visualSettings:
     bulletPrefab: {fileID: 3978676725339153351, guid: 9e0edcd936fa91442b7dc2f50e30ad90, type: 3}
@@ -2031,7 +2031,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d82dc98f098e1e34f9bc2230ae2f7369, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bStartingHealth: 100
+  bStartingHealth: 500
   targetScene: Victory Screen
 --- !u!114 &1417433921
 MonoBehaviour:
