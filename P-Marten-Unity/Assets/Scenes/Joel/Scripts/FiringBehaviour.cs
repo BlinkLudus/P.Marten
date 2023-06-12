@@ -36,6 +36,7 @@ public class FiringBehaviour : MonoBehaviour
     {
         if (canShoot)
         {
+            audioSource.Play();
             bulletsShot++;
             StartCoroutine(ShootWithDelay());
             canShoot = false; // Disable shooting until the delay is over
