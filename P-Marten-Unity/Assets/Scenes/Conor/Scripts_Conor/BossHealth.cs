@@ -11,11 +11,14 @@ public class BossHealth : MonoBehaviour
 
     private void Awake()
     {
+        // Initialise boss current health to be equal to
+        // the bosses starting health at the beginning of the game.
         bCurrentHealth = bStartingHealth;
     }
 
     public void ChangeHealth(int changeAmount)
     {
+        // Take boss' current health, add the change amount, and store the result back in the current health variable
         bCurrentHealth = bCurrentHealth + changeAmount;
         // Keep our currentHealth between 0 and starting health value
         bCurrentHealth = Mathf.Clamp(bCurrentHealth, 0, bStartingHealth);
